@@ -61,12 +61,12 @@ Users can also list their own properties, making the platform diverse and commun
 ## 🚀 Deployment
 The project is deployed on **Render** and connected to **MongoDB Atlas**.  
 
-🔗 **Live Demo**: [WanderLust App](https://wanderlust-travel-listings.onrender.com/)  
+🔗 **Live Demo**: [WanderLust App](https://travelogia.onrender.com)  
 
 ---
 
 ## ✍️ Author
-- Developed by **General Contributor(s)**  
+- Guided Project from **Apna College** 
 
 ---
 
