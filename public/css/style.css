@@ -7,6 +7,12 @@ body {
 
 .container {
   flex: 1;
+  max-width: 95%;
+}
+
+/* Global smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar {
@@ -22,6 +28,7 @@ body {
 .nav-link {
   color: #222222 !important;
   margin: 0 0.5rem !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .explore {
@@ -31,6 +38,7 @@ body {
 .f-info-links a {
   text-decoration: none !important;
   color: #222222 !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .f-info-links a:hover {
@@ -69,6 +77,7 @@ body {
 
 .listing-index-img {
   height: 15rem !important;
+  transition: all 0.4s ease-in-out;
 }
 
 .login-signup-form-inp {
@@ -79,7 +88,9 @@ body {
 }
 .show-img {
   height: 50vh;
+  transition: all 0.4s ease-in-out;
 }
+
 @media (max-width: 2000px) {
   .listing-index-img {
     height: 21rem !important;
@@ -212,6 +223,7 @@ body {
   border-radius: 1rem !important;
   width: 100% !important;
   object-fit: cover !important;
+  transition: all 0.4s ease-in-out;
 }
 
 .listing-card-body {
@@ -226,6 +238,7 @@ body {
 
 .card-img-overlay {
   opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-img-overlay:hover {
@@ -237,6 +250,12 @@ body {
 .edit-btn {
   background-color: #fe424d !important;
   border: none !important;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.add-btn:hover,
+.edit-btn:hover {
+  transform: scale(1.05);
 }
 
 .show-btns {
@@ -283,11 +302,17 @@ body {
   overflow: hidden;
   flex: 1;
   position: relative;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: center;
 }
 
 #filters {
   display: flex;
   transition: transform 0.3s ease-in-out;
+  width: max-content;
 }
 
 .filter {
@@ -296,6 +321,8 @@ body {
   margin-right: 2rem;
   margin-top: 1rem;
   opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  scroll-snap-align: start;
 }
 
 .filter:hover {
@@ -319,6 +346,7 @@ body {
   color: #a6a6a6;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
 }
 
 .scroll-btn.left-btn {
@@ -340,6 +368,7 @@ body {
   align-items: center;
   margin-bottom: 1rem;
   font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -376,11 +405,13 @@ body {
   color: #fff;
   border-radius: 2rem;
   padding: 0 1rem 0 1rem;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .search-btn:hover {
   background-color: #fe424d;
   color: #fff;
+  transform: scale(1.05);
 }
 .search-btn:active {
   background-color: #fe424d !important;
@@ -509,30 +540,8 @@ body {
   }
 }
 
-#filters-container {
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  align-items: center;
-}
-
-#filters {
-  display: flex;
-  width: max-content;
-}
-
-.filter {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-}
-
 #filters-container::-webkit-scrollbar {
   display: none;
-}
-
-.container {
-  max-width: 95%;
 }
 
 .map-click {
